@@ -13,6 +13,7 @@ def canny(img):
     cv.imshow('img',img)
     canny_img=cv.Canny(cv.cvtColor(img,cv.COLOR_RGB2GRAY),200,300)
     cv.imshow('canny-img',canny_img)
+    return canny_img
 
     
 

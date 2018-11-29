@@ -14,9 +14,10 @@ def add(img):
     np_img2=np_img[:,640:1280]
     np_img1=np_img[:,0:640]
 
-    np_img_add=np_img1+np_img2
+    np_img_add=cv.cvtColor(np_img1,cv.COLOR_RGB2GRAY)+ cv.cvtColor(np_img2,cv.COLOR_RGB2GRAY)
     cv.imshow('np_img_add',np_img_add)
-    cv.imshow('img',img)
+    return np_img_add
+    # cv.imshow('img',img)
 
 if __name__=='__main__':
     cap=cv.VideoCapture(url)
